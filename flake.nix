@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixpkgs/nixos/nixos-unstable";
   };
 
-  outputs = { ... }: {
+  outputs = {
     overlays = rec {
       default = proton-ge;
 
