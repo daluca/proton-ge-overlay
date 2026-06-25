@@ -12,6 +12,16 @@ final: prev: {
       runHook postBuild
     '';
   });
+  GE-Proton11-1 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton11";
+    version = "1";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-I7SSvzQQ/NqdvwjpJ9IFFtAaTS+rgHUyXx0us1vIOnw=";
+    };
+  };
+
   GE-Proton10-34 = final.proton-ge-versioned.overrideAttrs rec {
     pname = "GE-Proton10";
     version = "34";
