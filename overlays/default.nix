@@ -1,4 +1,4 @@
-final: prev: {
+final: prev: rec {
   proton-ge-versioned = prev.proton-ge-bin.overrideAttrs (oldAttrs: {
     buildCommand = /* bash */ ''
       runHook preBuild
@@ -12,6 +12,13 @@ final: prev: {
       runHook postBuild
     '';
   });
+
+  GE-Proton11 = GE-Proton11-1;
+  GE-Proton10 = GE-Proton10-34;
+  GE-Proton9 = GE-Proton9-27;
+  GE-Proton8 = GE-Proton8-32;
+  GE-Proton7 = GE-Proton7-55;
+
   GE-Proton11-1 = final.proton-ge-versioned.overrideAttrs rec {
     pname = "GE-Proton11";
     version = "1";
