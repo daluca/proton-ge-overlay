@@ -1118,4 +1118,374 @@ final: prev: rec {
       hash = "sha256-RWVIdAk4/9U/Zn/nQbw3y7xJv9rq12R8YZYE0rcROds=";
     };
   };
+
+  GE-Proton7-38 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "38";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-u3r+f2OtgYA4LDyy1sBczXErVGvG7Ck2s+wJSrQ2KOM=";
+    };
+  };
+
+  GE-Proton7-37 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "37";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-P8XIZ0TaOk7qQvC5Kj992Du/+p7knUygMyau2ze67XE=";
+    };
+  };
+
+  GE-Proton7-36 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "36";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-tGby+1yi4wYxHb84fMPzGKMAbbrDo/dY6ZzRuSsxMxk=";
+    };
+  };
+
+  GE-Proton7-35 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "35";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-W+uG7gsW+d7nxqrgqxUfNwiwEYFrZfJ8aDEdWhPhx4o=";
+    };
+  };
+
+  GE-Proton7-34 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "34";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-74zW6+El0RNz0wQhPywfhexwj3A0igy12iSRyZoaQR8=";
+    };
+  };
+
+  GE-Proton7-33 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "33";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-0MOIZs/8g/0ekmpw7WwTf7goY+iynmHZXYhzSQtwBaU=";
+    };
+  };
+
+  GE-Proton7-31 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "31";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-JPUxuNUP7UrEgroJrQRZYEs/m4mdF36vqbP1XSXxx+k=";
+    };
+  };
+
+  GE-Proton7-30 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "30";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-lQR19PDTyz+W7d9IgnXj3yIJqrs6F4u4EM0yblgnZsk=";
+    };
+  };
+
+  GE-Proton7-29 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "29";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-sREHuaWd4PtfmkkiGB5EpU1YvnZ1a9bllB2q7bI7kcg=";
+    };
+  };
+
+  GE-Proton7-28 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "28";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-rXBIA238lgrMbhfL91mNFNUP9GP4DJ2gWNTtzkqqfg4=";
+    };
+  };
+
+  GE-Proton7-27 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "27";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-RM1OjfIN0jle5V5zcMCR8voC9zhGZl2WP6urn36nl2w=";
+    };
+  };
+
+  GE-Proton7-26 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "26";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-AgNz1Ci/ZBcIeVKju+nqfRkctzGIQPm8NKBjdJPRu+c=";
+    };
+  };
+
+  GE-Proton7-25 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "25";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-7Bsky6AG4PDHKS5iIneamJErnJ9CxEq9BGOoHJg5OnM=";
+    };
+  };
+
+  GE-Proton7-24 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "24";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-SrwKW39pQt+ZOj4Pn3ZfMZxK+M3AxTv2mSeg2h2z+t8=";
+    };
+  };
+
+  GE-Proton7-23 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "23";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-MDOEg3Vnqw5BeLVBUPeDtRLsfaTeWnvkZtFUCnZ7I6k=";
+    };
+  };
+
+  GE-Proton7-22 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "22";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-CCJ+RDD4c1G/Gfrz7oOiCo+uiV9UlRMvAdrZzKd4B4k=";
+    };
+  };
+
+  GE-Proton7-21 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "21";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-V5+QpQSz36WHUTKz8tsNq8ozq9nTl9cOGghvUm/tfpU=";
+    };
+  };
+
+  GE-Proton7-20 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "20";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-80rak9Z/HCdR+axUQnB12tD4rlVjB5GAjRfkLQkAKWQ=";
+    };
+  };
+
+  GE-Proton7-19 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "19";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-zb2QhJnGBsVMvbvz7Mfiw32rRnGTotPxfnrJ76xBOHo=";
+    };
+  };
+
+  GE-Proton7-18 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "18";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-namKiUgyZ4IImmmeygHMI31yCI2kipbFLRMk2rtZqiE=";
+    };
+  };
+
+  GE-Proton7-17 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "17";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-jK3Pkt6u+WRvSu7UWs16RGm++zWFSsgBnKtS5GkMGWs=";
+    };
+  };
+
+  GE-Proton7-16 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "16";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-VmbzXsTqZ4c4bShOyx+faI6w19aw3thYOxPezuuXYJo=";
+    };
+  };
+
+  GE-Proton7-15 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "15";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-IacCNkR1RRqSrX5UYYIbkZoV8z6rSarKisBjS5z50CM=";
+    };
+  };
+
+  GE-Proton7-14 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "14";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-JEY3ezoUVYPKGH0Mo3llWDD+tZXvm7idSi+uzD/u11M=";
+    };
+  };
+
+  GE-Proton7-13 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "13";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-0lWNyC+07vuuB96LloT7AfC3LO9U5hWXzoJv5+ADKhw=";
+    };
+  };
+
+  GE-Proton7-12 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "12";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-gBAWzdqIZHaH7Anh2DtFWeCDED2USK4aoQfI/OZbnjY=";
+    };
+  };
+
+  GE-Proton7-11 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "11";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-yxrLVhEXDCLSjLxu5qSoYQp5rsKu4wkwNNWr+UlqbkM=";
+    };
+  };
+
+  GE-Proton7-10 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "10";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-9u0V3+d1WCTw37wEuhO/vOen/drQo3pN4ppqMk57I1M=";
+    };
+  };
+
+  GE-Proton7-9 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "9";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-UdaijAWQbj2/lmltcMGeuEV8ZLqK/dpU04jUvpcQs0E=";
+    };
+  };
+
+  GE-Proton7-8 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "8";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-2cPRPC5oIekr1nSm+9iCNxUuWzXjx242snSKZ2TEg68=";
+    };
+  };
+
+  GE-Proton7-7 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "7";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-/XNpNrKoHJeGyp0GP66U+UtXVUjsBh4FSdCtlN/jcxY=";
+    };
+  };
+
+  GE-Proton7-6 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "6";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-Qjnxz14ZYYj9yeCkDNNerUUplShGrBjG/6B28RuNJas=";
+    };
+  };
+
+  GE-Proton7-5 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "5";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-x9tWcACU5p5/A/jlp4cXb/W7dIaYvwr9RPUzuJP+k1E=";
+    };
+  };
+
+  GE-Proton7-4 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "4";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-JD4Q+7eXWodqv0IU3jEnELYX++XX1NJCZXtpRjqpTrM=";
+    };
+  };
+
+  GE-Proton7-3 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "3";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-vPL3AfZZcQQQKgfGb2dvGuArYTC0xTNmbSXFEU9O72k=";
+    };
+  };
+
+  GE-Proton7-2 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "2";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-5SYWiyWn23TeYUi7Q/bhai5zZF4ezGFIzk9LaS5TJxg=";
+    };
+  };
+
+  GE-Proton7-1 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton7";
+    version = "1";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-a7L+tLf99NKn0+PL353xzPsA/ijOXo8kSUCAP9EolJU=";
+    };
+  };
 }
