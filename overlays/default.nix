@@ -13,11 +13,32 @@ final: prev: rec {
     '';
   });
 
-  GE-Proton11 = GE-Proton11-3;
+  GE-Proton11 = GE-Proton11-5;
   GE-Proton10 = GE-Proton10-34;
   GE-Proton9 = GE-Proton9-27;
   GE-Proton8 = GE-Proton8-32;
   GE-Proton7 = GE-Proton7-55;
+
+  GE-Proton11-5 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton11";
+    version = "5";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-Sbyi5zXMhPIKSotvL5LEZ2dbDoLpXRcCyuY9TsnBnus=";
+    };
+  };
+
+  GE-Proton11-4 = final.proton-ge-versioned.overrideAttrs rec {
+    pname = "GE-Proton11";
+    version = "4";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      hash = "sha256-4Ci/onAfV4ENgR53eFrg/8w4+vAf5lVyQFBQaXW0lnI=";
+    };
+  };
+
 
   GE-Proton11-3 = final.proton-ge-versioned.overrideAttrs rec {
     pname = "GE-Proton11";
