@@ -24,7 +24,7 @@ final: prev: rec {
     version = "5";
 
     src = prev.fetchzip {
-      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}-x86_64.tar.gz";
       hash = "sha256-Sbyi5zXMhPIKSotvL5LEZ2dbDoLpXRcCyuY9TsnBnus=";
     };
   };
@@ -34,7 +34,7 @@ final: prev: rec {
     version = "4";
 
     src = prev.fetchzip {
-      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}.tar.gz";
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}-x86_64.tar.gz";
       hash = "sha256-4Ci/onAfV4ENgR53eFrg/8w4+vAf5lVyQFBQaXW0lnI=";
     };
   };
