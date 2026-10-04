@@ -19,7 +19,7 @@ final: prev: rec {
   GE-Proton8 = GE-Proton8-32;
   GE-Proton7 = GE-Proton7-55;
 
-  GE-Proton11-7 = final.proton-ge-versioned.overrideAttrs rec {
+  GE-Proton11-7 = (final.proton-ge-versioned.override { steamDisplayName = "GE-Proton11-7"; }).overrideAttrs rec {
     pname = "GE-Proton11";
     version = "7";
 
@@ -29,7 +29,7 @@ final: prev: rec {
     };
   };
 
-  GE-Proton11-6 = final.proton-ge-versioned.overrideAttrs rec {
+  GE-Proton11-6 = (final.proton-ge-versioned.override { steamDisplayName = "GE-Proton11-6"; }).overrideAttrs rec {
     pname = "GE-Proton11";
     version = "6";
 
@@ -39,7 +39,7 @@ final: prev: rec {
     };
   };
 
-  GE-Proton11-5 = final.proton-ge-versioned.overrideAttrs rec {
+  GE-Proton11-5 = (final.proton-ge-versioned.override { steamDisplayName = "GE-Proton11-5"; }).overrideAttrs rec {
     pname = "GE-Proton11";
     version = "5";
 
@@ -49,7 +49,7 @@ final: prev: rec {
     };
   };
 
-  GE-Proton11-4 = final.proton-ge-versioned.overrideAttrs rec {
+  GE-Proton11-4 = (final.proton-ge-versioned.override { steamDisplayName = "GE-Proton11-4"; }).overrideAttrs rec {
     pname = "GE-Proton11";
     version = "4";
 
