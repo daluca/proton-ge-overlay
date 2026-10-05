@@ -2,14 +2,19 @@
 default:
     @just --list
 
-[positional-arguments]
-prefetch *proton-versions='':
-    #!/usr/bin/env -S nix shell nixpkgs#bash --command bash
+alias fmt := format
 
-    set -euo pipefail
+# format repository
+[group("repo")]
+format:
+    nix fmt
 
-    for PROTON_VERSION in "$@"; do
-      PREFETCH="$( nix-prefetch-url --print-path --unpack "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${PROTON_VERSION}/${PROTON_VERSION}-x86_64.tar.gz" )"
-      PROTON_HASH="$( nix hash path "${PREFETCH##*$'\n'}" )"
-      echo "${PROTON_VERSION}: ${PROTON_HASH}"
-    done
+# run pre-commit on all files
+[group("checks")]
+pre-commit:
+    pre-commit run --all-files
+
+# run all checks on all system types
+[group("flake")]
+check: format pre-commit
+    nix flake check --all-systems
