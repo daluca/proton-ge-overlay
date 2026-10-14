@@ -13,11 +13,31 @@ final: prev: rec {
     '';
   });
 
-  GE-Proton11 = GE-Proton11-7;
+  GE-Proton11 = GE-Proton11-9;
   GE-Proton10 = GE-Proton10-34;
   GE-Proton9 = GE-Proton9-27;
   GE-Proton8 = GE-Proton8-32;
   GE-Proton7 = GE-Proton7-55;
+  
+  GE-Proton11-9 = (final.proton-ge-versioned.override { steamDisplayName = "GE-Proton11-9"; }).overrideAttrs rec {
+    pname = "GE-Proton11";
+    version = "9";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}-x86_64.tar.gz";
+      hash = "sha256-1o3sTPdQmIOKkm6qctt9lQfDEMCsysFyVfVK4sfRpw8=";
+    };
+  };
+
+  GE-Proton11-8 = (final.proton-ge-versioned.override { steamDisplayName = "GE-Proton11-8"; }).overrideAttrs rec {
+    pname = "GE-Proton11";
+    version = "8";
+
+    src = prev.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${pname}-${version}/${pname}-${version}-x86_64.tar.gz";
+      hash = "sha256-5GBjBo+HD1R/Y8CSeebhvzdGRNTD5WUyXEbpPurAXr8=";
+    };
+  };
 
   GE-Proton11-7 = (final.proton-ge-versioned.override { steamDisplayName = "GE-Proton11-7"; }).overrideAttrs rec {
     pname = "GE-Proton11";
