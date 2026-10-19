@@ -6,6 +6,7 @@
       ];
       name = "proton-ge-overlay";
       packages = with pkgs; [
+        gh
         just
       ];
     };
