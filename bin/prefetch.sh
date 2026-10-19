@@ -22,7 +22,7 @@ for PROTON_VERSION in "${POSITIONAL_ARGS[@]}"; do
   ARCHITECTURES=()
   if [[ ${PROTON_VERSION} == GE-Proton11-3 ]]; then
     ARCHITECTURES+=("" "-aarch64")
-  elif [[ ${PROTON_VERSION} =~ GE-Proton1[2-9]-* ]] || [[ ${PROTON_VERSION} =~ GE-Proton11-* && ! ${PROTON_VERSION} =~ GE-Proton11-[1-2] ]]; then
+  elif [[ ${PROTON_VERSION} =~ GE-Proton1[2-9]-* ]] || [[ ${PROTON_VERSION} =~ GE-Proton11-* && ! ${PROTON_VERSION} =~ GE-Proton11-[1-2]$ ]]; then
     ARCHITECTURES+=("-x86_64" "-aarch64")
   else
     ARCHITECTURES+=("")
