@@ -2,7 +2,7 @@
 
 Add GE-Proton packages in NixOS via overlays.
 
-Included are options to expose to these packages to be view but non Steam applications as well.
+Included are options to expose these packages to be viewed by non Steam applications.
 
 ## Install
 
