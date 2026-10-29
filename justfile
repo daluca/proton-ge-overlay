@@ -1,4 +1,4 @@
-proton_ge_repo := "GloriousEggroll/proton-ge-custom"
+latest := `curl --silent https://api.github.com/repos/GloriousEggroll/proton-ge-custom/releases/latest | jq --raw-output '.tag_name'`
 
 [private]
 default:
@@ -21,11 +21,7 @@ pre-commit:
 check: format pre-commit
     nix flake check --all-systems
 
-# prefetch hashes for the latest upstream GE-Proton release
+# prefetch hashes, defaults to latest version
 [group("update")]
-prefetch-latest:
-    #!/usr/bin/env bash
-    set -euo pipefail
-    latest_tag="$(gh release view --repo "{{ proton_ge_repo }}" --json tagName --jq .tagName)"
-    echo "Latest release: ${latest_tag}"
-    ./bin/prefetch.sh "${latest_tag}"
+prefetch versions=latest:
+    ./bin/prefetch.sh {{ versions }}
