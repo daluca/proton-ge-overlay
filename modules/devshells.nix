@@ -8,6 +8,8 @@
       packages = with pkgs; [
         gh
         just
+        curl
+        jq
       ];
     };
   };
