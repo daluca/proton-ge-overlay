@@ -55,9 +55,22 @@
         GE-Proton11-2 = "sha256-gpCZhsMqQ0VthslX9P5jiVmV1HF7659bE81a+7qYx24=";
         GE-Proton11-1 = "sha256-I7SSvzQQ/NqdvwjpJ9IFFtAaTS+rgHUyXx0us1vIOnw=";
       };
+      latest-version =
+        "GE-Proton11-"
+        + toString (
+          builtins.head (
+            prev.lib.reverseList (
+              builtins.sort builtins.lessThan (
+                prev.lib.mapAttrsToList (
+                  name: _value: prev.lib.toInt (prev.lib.removePrefix "GE-Proton11-" name)
+                ) GE-Proton11
+              )
+            )
+          )
+        );
     in
     {
-      GE-Proton11 = final.GE-Proton11-14.overrideAttrs (oldAttrs: rec {
+      GE-Proton11 = final.${latest-version}.overrideAttrs (oldAttrs: rec {
         __intentionallyOverridingVersion = true;
 
         version = "GE-Proton11";
