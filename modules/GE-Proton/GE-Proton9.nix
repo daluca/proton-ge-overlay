@@ -2,6 +2,7 @@
   flake.overlays.GE-Proton9 =
     final: prev:
     let
+      inherit (prev) lib;
       GE-Proton9 = {
         GE-Proton9-27 = "sha256-70au1dx9co3X+X7xkBCDGf1BxEouuw3zN+7eDyT7i5c=";
         GE-Proton9-26 = "sha256-HwwQw888rfej5ZsMQdFOojk5RY1AKNGvVpAnRVW3qUg=";
@@ -35,10 +36,10 @@
         "GE-Proton9-"
         + toString (
           builtins.head (
-            prev.lib.reverseList (
+            lib.reverseList (
               builtins.sort builtins.lessThan (
-                prev.lib.mapAttrsToList (
-                  name: _value: prev.lib.toInt (prev.lib.removePrefix "GE-Proton9-" name)
+                lib.mapAttrsToList (
+                  name: _value: lib.toInt (lib.removePrefix "GE-Proton9-" name)
                 ) GE-Proton9
               )
             )
@@ -57,7 +58,7 @@
         '';
       });
     }
-    // prev.lib.mapAttrs (
+    // lib.mapAttrs (
       version: hash:
       prev.proton-ge-bin.overrideAttrs {
         inherit version;

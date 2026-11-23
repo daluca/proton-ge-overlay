@@ -2,6 +2,7 @@
   flake.overlays.GE-Proton11 =
     final: prev:
     let
+      inherit (prev) lib;
       inherit (prev.stdenv.hostPlatform.uname) processor;
       GE-Proton11 = {
         GE-Proton11-14 = {
@@ -59,10 +60,10 @@
         "GE-Proton11-"
         + toString (
           builtins.head (
-            prev.lib.reverseList (
+            lib.reverseList (
               builtins.sort builtins.lessThan (
-                prev.lib.mapAttrsToList (
-                  name: _value: prev.lib.toInt (prev.lib.removePrefix "GE-Proton11-" name)
+                lib.mapAttrsToList (
+                  name: _value: lib.toInt (lib.removePrefix "GE-Proton11-" name)
                 ) GE-Proton11
               )
             )
@@ -81,7 +82,7 @@
         '';
       });
     }
-    // prev.lib.mapAttrs (
+    // lib.mapAttrs (
       version: hash:
       prev.proton-ge-bin.overrideAttrs {
         inherit version;
@@ -102,7 +103,7 @@
         ];
       }
     ) GE-Proton11
-    // prev.lib.mapAttrs (
+    // lib.mapAttrs (
       version: hash:
       let
         url =
@@ -136,9 +137,9 @@
           "aarch64-linux"
         ];
       }
-    ) (prev.lib.filterAttrs (version: _hash: version == "GE-Proton11-3") GE-Proton11)
+    ) (lib.filterAttrs (version: _hash: version == "GE-Proton11-3") GE-Proton11)
     //
-      prev.lib.mapAttrs
+      lib.mapAttrs
         (
           version: hash:
           prev.proton-ge-bin.overrideAttrs {
@@ -156,7 +157,7 @@
           }
         )
         (
-          prev.lib.filterAttrs (
+          lib.filterAttrs (
             version: _hash: version == "GE-Proton11-1" || version == "GE-Proton11-2"
           ) GE-Proton11
         );

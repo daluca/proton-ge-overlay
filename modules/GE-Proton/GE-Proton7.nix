@@ -2,6 +2,7 @@
   flake.overlays.GE-Proton7 =
     final: prev:
     let
+      inherit (prev) lib;
       GE-Proton7 = {
         GE-Proton7-55 = "sha256-6CL+9X4HBNoB/yUMIjA933XlSjE6eJC86RmwiJD6+Ws=";
         GE-Proton7-54 = "sha256-cQOw8lXGgMcl7SFNdCPfeTblBS9QFsKrtZ0j0oImwcc=";
@@ -63,10 +64,10 @@
         "GE-Proton7-"
         + toString (
           builtins.head (
-            prev.lib.reverseList (
+            lib.reverseList (
               builtins.sort builtins.lessThan (
-                prev.lib.mapAttrsToList (
-                  name: _value: prev.lib.toInt (prev.lib.removePrefix "GE-Proton7-" name)
+                lib.mapAttrsToList (
+                  name: _value: lib.toInt (lib.removePrefix "GE-Proton7-" name)
                 ) GE-Proton7
               )
             )
@@ -85,7 +86,7 @@
         '';
       });
     }
-    // prev.lib.mapAttrs (
+    // lib.mapAttrs (
       version: hash:
       prev.proton-ge-bin.overrideAttrs {
         inherit version;
@@ -101,7 +102,7 @@
         '';
       }
     ) GE-Proton7
-    // prev.lib.mapAttrs (
+    // lib.mapAttrs (
       version: hash:
       prev.proton-ge-bin.overrideAttrs {
         inherit version;
@@ -116,5 +117,5 @@
             --replace-warn "GE-Proton7-51" "${version}"
         '';
       }
-    ) (prev.lib.filterAttrs (version: _hash: version == "GE-Proton7-51-diablo_4_beta") GE-Proton7);
+    ) (lib.filterAttrs (version: _hash: version == "GE-Proton7-51-diablo_4_beta") GE-Proton7);
 }
