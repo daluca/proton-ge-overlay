@@ -2,6 +2,7 @@
   flake.overlays.GE-Proton11 =
     final: prev:
     let
+      inherit (prev) lib;
       inherit (prev.stdenv.hostPlatform.uname) processor;
       GE-Proton11 = {
         GE-Proton11-14 = {
@@ -55,9 +56,22 @@
         GE-Proton11-2 = "sha256-gpCZhsMqQ0VthslX9P5jiVmV1HF7659bE81a+7qYx24=";
         GE-Proton11-1 = "sha256-I7SSvzQQ/NqdvwjpJ9IFFtAaTS+rgHUyXx0us1vIOnw=";
       };
+      latest-version =
+        "GE-Proton11-"
+        + toString (
+          builtins.head (
+            lib.reverseList (
+              builtins.sort builtins.lessThan (
+                lib.mapAttrsToList (
+                  name: _value: lib.toInt (lib.removePrefix "GE-Proton11-" name)
+                ) GE-Proton11
+              )
+            )
+          )
+        );
     in
     {
-      GE-Proton11 = final.GE-Proton11-14.overrideAttrs (oldAttrs: rec {
+      GE-Proton11 = final.${latest-version}.overrideAttrs (oldAttrs: rec {
         __intentionallyOverridingVersion = true;
 
         version = "GE-Proton11";
@@ -68,7 +82,7 @@
         '';
       });
     }
-    // prev.lib.mapAttrs (
+    // lib.mapAttrs (
       version: hash:
       prev.proton-ge-bin.overrideAttrs {
         inherit version;
@@ -89,7 +103,7 @@
         ];
       }
     ) GE-Proton11
-    // prev.lib.mapAttrs (
+    // lib.mapAttrs (
       version: hash:
       let
         url =
@@ -123,9 +137,9 @@
           "aarch64-linux"
         ];
       }
-    ) (prev.lib.filterAttrs (version: _hash: version == "GE-Proton11-3") GE-Proton11)
+    ) (lib.filterAttrs (version: _hash: version == "GE-Proton11-3") GE-Proton11)
     //
-      prev.lib.mapAttrs
+      lib.mapAttrs
         (
           version: hash:
           prev.proton-ge-bin.overrideAttrs {
@@ -143,7 +157,7 @@
           }
         )
         (
-          prev.lib.filterAttrs (
+          lib.filterAttrs (
             version: _hash: version == "GE-Proton11-1" || version == "GE-Proton11-2"
           ) GE-Proton11
         );
