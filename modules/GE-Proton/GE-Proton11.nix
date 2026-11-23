@@ -4,6 +4,10 @@
     let
       inherit (prev.stdenv.hostPlatform.uname) processor;
       GE-Proton11 = {
+        GE-Proton11-14 = {
+          x86_64 = "sha256-Bru3l0AqrvDl+XYC1dYhmy5XqKP49yFjWVJwZzel60Q=";
+          aarch64 = "sha256-n51sElFtNZQRJOpWdH1jpg+H0Wq7Q6TjCtg1wl3a44Y=";
+        };
         GE-Proton11-13 = {
           x86_64 = "sha256-R+khc9dtfN47+pudaKN6urSskanJe6qKGlAC+Ww2/yE=";
           aarch64 = "sha256-oXGAQaVWMsgTzba6KTryMm22autiK8Mivb3VzyfaBow=";
@@ -53,7 +57,7 @@
       };
     in
     {
-      GE-Proton11 = final.GE-Proton11-13.overrideAttrs (oldAttrs: rec {
+      GE-Proton11 = final.GE-Proton11-14.overrideAttrs (oldAttrs: rec {
         __intentionallyOverridingVersion = true;
 
         version = "GE-Proton11";
